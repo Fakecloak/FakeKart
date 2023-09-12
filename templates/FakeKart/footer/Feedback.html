@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fakekart.in Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback for Fakekart.in</h1>
+        <p>We value your feedback! Please click the button below to send us an email with your thoughts, suggestions, or concerns.</p>
+        <button onclick="redirectToMailPage()">Provide Feedback</button>
+    </div>
+
+    <script>
+        function redirectToMailPage() {
+            // Replace 'mailto' with the actual email address you want to use for feedback
+            var email = 'feedback@fakekart.in';
+            var subject = 'Feedback for Fakekart.in';
+            var body = 'Hello Fakekart Team,\n\nI would like to provide the following feedback:\n\n';
+
+            // Create a mailto link
+            var mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            // Redirect to the mailto link
+            window.location.href = mailtoLink;
+        }
+    </script>
+<!--font awesome file-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <br>
+      <a class="nav-link" aria-current="page" href="{% url 'home' %}"><i class="fa fa-home fa-lg">Home</i></a>
+      
+</body>
+</html>
